@@ -78,7 +78,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                 await f.close()
 
     image1 = Image.open("./background.png")
-    image2 = Image.open("etc/foreground.png")
+    image2 = Image.open("etc/LightBlue.png")
     image3 = changeImageSize(1280, 720, image1)
     image4 = changeImageSize(1280, 720, image2)
     image5 = image3.convert("RGBA")
@@ -92,7 +92,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     draw.text((190, 630), f"Views: {views}", (255, 255, 255), font=font)
     draw.text(
         (190, 670),
-        f"Powered By: 𝐒𝐮𝐦𝐢𝐭 𝐘𝐚𝐝𝐚𝐯",
+        f"Powered By:「 𝙋𝙍𝘼𝙏𝙃𝙀𝙀𝙆 」→🇮🇳",
         (255, 255, 255),
         font=font,
     )
@@ -155,7 +155,7 @@ async def play(_, message: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"**ᴀꜱꜱɪꜱᴛᴀɴᴛ ɴᴏᴛ ᴛᴏ ᴊᴏɪɴ \n ᴛʜɪꜱ ᴄʜᴀᴛ...**"
+            f"**ᴀꜱꜱɪꜱᴛᴀɴᴛ ғᴀɪʟᴇᴅ ᴛᴏ ᴊᴏɪɴ \n ᴛʜɪꜱ ᴄʜᴀᴛ...**"
         )
         return
 
@@ -345,7 +345,7 @@ async def play(_, message: Message):
 async def pause(_, message: Message):
     await callsmusic.pytgcalls.pause_stream(message.chat.id)
     await message.reply_photo(
-                             photo="https://telegra.ph/file/a006296a52c8dde8ef284.jpg", 
+                             photo="https://telegra.ph/file/0297e1b22f44f655032d2.jpg", 
                              caption="**⚡ᴅᴀʀᴋxᴍᴜꜱɪᴄ⚡ ᴍᴜꜱɪᴄ\n ɴᴏᴡ ▶️ ᴘᴀᴜꜱᴇᴅ ...**"
     )
 
@@ -356,7 +356,7 @@ async def pause(_, message: Message):
 async def resume(_, message: Message):
     await callsmusic.pytgcalls.resume_stream(message.chat.id)
     await message.reply_photo(
-                             photo="https://telegra.ph/file/38fabea31f8779f2e1f9d.jpg", 
+                             photo="https://telegra.ph/file/0297e1b22f44f655032d2.jpg", 
                              caption="**⚡ᴅᴀʀᴋxᴍᴜꜱɪᴄ⚡ ᴍᴜꜱɪᴄ\n ɴᴏᴡ ⏸ ᴘʟᴀʏɪɴɢ ...**"
     )
 
@@ -390,7 +390,7 @@ async def skip(_, message: Message):
                 )
 
     await message.reply_photo(
-                             photo="https://telegra.ph/file/104c690a2b8d3c95a7262.jpg", 
+                             photo="https://telegra.ph/file/0297e1b22f44f655032d2.jpg", 
                              caption=f'**⚡ᴅᴀʀᴋxᴍᴜꜱɪᴄ⚡ ᴍᴜꜱɪᴄ \n ɴᴏᴡ ⏩ꜱᴋɪᴘᴘᴇᴅ...**'
    ) 
 
@@ -406,7 +406,7 @@ async def stop(_, message: Message):
 
     await callsmusic.pytgcalls.leave_group_call(message.chat.id)
     await message.reply_photo(
-                             photo="https://telegra.ph/file/a006296a52c8dde8ef284.jpg", 
+                             photo="https://telegra.ph/file/0297e1b22f44f655032d2.jpg", 
                              caption="**⚡ᴅᴀʀᴋxᴍᴜꜱɪᴄ⚡ ᴍᴜꜱɪᴄ\n ɴᴏᴡ ❌ ꜱᴛᴏᴘᴘᴇᴅ ...**"
     )
 
@@ -424,6 +424,6 @@ async def admincache(client, message: Message):
     )
 
     await message.reply_photo(
-                              photo="https://telegra.ph/file/104c690a2b8d3c95a7262.jpg",
+                              photo="https://telegra.ph/file/0297e1b22f44f655032d2.jpg",
                               caption="**⚡ᴅᴀʀᴋxᴍᴜꜱɪᴄ⚡ ᴍᴜꜱɪᴄ\n ɴᴏᴡ ʀᴇᴀʟᴏᴀᴅᴇᴅ ...**"
     )
