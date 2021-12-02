@@ -1,50 +1,34 @@
+import os
 from os import path
-from typing import Dict
-from pyrogram import Client
-from pyrogram.types import Message, Voice
-from typing import Callable, Coroutine, Dict, List, Tuple, Union
-from callsmusic import callsmusic
-from queues import queues
-from helpers.admins import get_administrators
-from os import path
+from asyncio.queues import QueueEmpty
+from typing import Callable
+from pyrogram import Client, filters
+from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.errors import UserAlreadyParticipant
+from modules.cache.admins import set
+from modules.callsmusic import callsmusic, queues
+from modules.callsmusic.callsmusic import client as USER
+from modules.helpers.admins import get_administrators
 import requests
 import aiohttp
 import yt_dlp
 from youtube_search import YoutubeSearch
-from pyrogram import filters, emoji
-from pyrogram.types import InputMediaPhoto
-from pyrogram.errors.exceptions.bad_request_400 import ChatAdminRequired
-from pyrogram.errors.exceptions.flood_420 import FloodWait
-import traceback
-import os
-import sys
-from callsmusic.callsmusic import client as USER
-from pyrogram.errors import UserAlreadyParticipant
-import converter
-from downloaders import youtube
-import config
-
-from config import BOT_USERNAME as bn, DURATION_LIMIT
-from helpers.filters import command, other_filters
-from helpers.decorators import errors, authorized_users_only
-from helpers.errors import DurationLimitError
-from helpers.gets import get_url, get_file_name
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from cache.admins import admins as a
-import os
-import aiohttp
+from modules import converter
+from modules.downloaders import youtube
+from modules.config import DURATION_LIMIT, que, SUDO_USERS
+from modules.cache.admins import admins as a
+from modules.helpers.filters import command, other_filters
+from modules.helpers.command import commandpro
+from modules.helpers.decorators import errors, authorized_users_only
+from modules.helpers.errors import DurationLimitError
+from modules.helpers.gets import get_url, get_file_name
+from modules.helpers.channelmusic import get_chat_id
 import aiofiles
 import ffmpeg
-from PIL import Image
-from PIL import ImageFont
-from PIL import ImageDraw
-from config import que
-from pyrogram.errors import UserNotParticipant
+from PIL import Image, ImageFont, ImageDraw
 from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputStream
-import json
-import wget
 chat_id = None
 
 def cb_admin_check(func: Callable) -> Callable:
