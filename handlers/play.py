@@ -1,4 +1,4 @@
-# # Sumit Yadav // @Sumit9969
+# # PratheekXD // @PRATHEEK06
 
 import os
 from os import path
@@ -223,7 +223,7 @@ async def play(_, message: Message):
                 [
                         InlineKeyboardButton(
                             text="𝐒𝐮𝐩𝐩𝐨𝐫𝐭",
-                            url=f"https://t.me/World_FriendShip_Zone")
+                            url=f"https://t.me/Shizuka_vc_support")
 
                 ]
             ]
@@ -239,7 +239,7 @@ async def play(_, message: Message):
                 [
                         InlineKeyboardButton(
                             text="𝐒𝐮𝐩𝐩𝐨𝐫𝐭",
-                            url=f"https://t.me/World_FriendShip_Zone")
+                            url=f"https://t.me/Shizuka_vc_support")
 
                 ]
             ]
